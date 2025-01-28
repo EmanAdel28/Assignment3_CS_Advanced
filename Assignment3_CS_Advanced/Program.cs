@@ -5,7 +5,7 @@ using Assignment3_CS_Advanced.HashTable;
 using Assignment3_CS_Advanced.Sorted_Dictionary;
 namespace Assignment3_CS_Advanced
 {
-    
+
     internal class Program
     {
         static void Main(string[] args)
@@ -165,34 +165,87 @@ namespace Assignment3_CS_Advanced
             #region Q2_Part2
             //You have a hashtable where its values are integers, find the key associated with the highest value.
 
-            Hashtable hashtable = new Hashtable();
-            hashtable.Add("A", 6);
-            hashtable.Add("B", 5);
-            hashtable.Add("C", 8);
-            hashtable.Add("D", 2);
+            //Hashtable hashtable = new Hashtable();
+            //hashtable.Add("A", 6);
+            //hashtable.Add("B", 5);
+            //hashtable.Add("C", 8);
+            //hashtable.Add("D", 2);
 
-            string highestKey = null;
-            int highestValue = int.MinValue;
-            foreach (DictionaryEntry entry in hashtable)
-            {
-                
-                if((int)entry.Value>highestValue)
-                {
-                    highestValue = (int)entry.Value;
-                    highestKey = (string)entry.Key;
-                }
-                
-            }
+            //string highestKey = null;
+            //int highestValue = int.MinValue;
+            //foreach (DictionaryEntry entry in hashtable)
+            //{
 
-            Console.WriteLine($"Key with the highest value: {highestKey}, Value: {highestValue}");
+            //    if((int)entry.Value>highestValue)
+            //    {
+            //        highestValue = (int)entry.Value;
+            //        highestKey = (string)entry.Key;
+            //    }
 
+            //}
+
+            //Console.WriteLine($"Key with the highest value: {highestKey}, Value: {highestValue}");
+
+            #endregion
+
+            #region Q3_Part2
+            //You have a hashtable , the  user will enter targetValue find all keys that associated with a specific targetValue
+
+            //    Hashtable hashtable = new Hashtable();
+            //    hashtable.Add("A", 6);
+            //    hashtable.Add("B", 5);
+            //    hashtable.Add("C", 8);
+            //    hashtable.Add("D", 2);
+
+            //    // Ask the user to enter the target value
+            //    Console.Write("Enter the target value: ");
+            //    int targetValue;
+            //    if (!int.TryParse(Console.ReadLine(), out targetValue))
+            //    {
+            //        Console.WriteLine("Invalid input. Please enter a valid integer.");
+            //        return;
+            //    }
+
+            //    // Find all keys associated with the target value
+            //    ArrayList matchingKeys = new ArrayList();
+            //    foreach (DictionaryEntry entry in hashtable)
+            //    {
+            //        if ((int)entry.Value == targetValue)
+            //        {
+            //            matchingKeys.Add(entry.Key);
+            //        }
+            //    }
+
+            //    // Display the result
+            //    if (matchingKeys.Count > 0)
+            //    {
+            //        Console.WriteLine($"Keys associated with value {targetValue}:");
+            //        foreach (var key in matchingKeys)
+            //        {
+            //            Console.WriteLine(key);
+            //        }
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine($"No keys are associated with the value {targetValue}.");
+            //    }
+            //}
+
+
+
+            #endregion
+
+            #region
+            #endregion
+
+            #region
             #endregion
 
             #region
             #endregion
             #endregion
         }
-
-
     }
 }
+
+
