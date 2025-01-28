@@ -81,7 +81,28 @@ namespace Assignment3_CS_Advanced
             // -- in namespace  => System.Collection.Generic
             // -- A generic key-value pair collection with type safety.
 
-            SortedDictionary<String, int> NoteBook = new SortedDictionary<String, int>(new StringSortedDec());
+            //SortedDictionary<String, int> NoteBook = new SortedDictionary<String, int>(new StringSortedDec());
+            //NoteBook.Add("Eman", 123);
+            //NoteBook.Add("Amira", 456);
+            //NoteBook.Add("Khalid", 789);
+
+            //foreach (KeyValuePair<String, int> pair in NoteBook)
+            //{
+            //    Console.WriteLine($"{pair.Key} :: {pair.Value}");
+            //}
+
+
+            #endregion
+
+            #region 3-SortedDictionary
+            // Sorted Data Asc by default
+            // Work with algorithm 2 Array
+            // Time Complexity => O(log n )  in Search and retrieve
+            // Time Complexity => O(1)  in Insertion and Remove
+            // -- in namespace  => System.Collection.Generic
+            // -- A generic key-value pair collection with type safety.
+
+            SortedList<String , int> NoteBook = new SortedList<String , int>(new StringSortedDec());
             NoteBook.Add("Eman", 123);
             NoteBook.Add("Amira", 456);
             NoteBook.Add("Khalid", 789);
