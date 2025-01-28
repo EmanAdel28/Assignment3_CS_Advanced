@@ -35,6 +35,28 @@ namespace Assignment3_CS_Advanced
             List<List<string>> result = new List<List<string>>(anagramGroups.Values);
             return result;
         }
+
+        static bool ContainsDuplicates(int[] array)
+        {
+            
+            HashSet<int> seen = new HashSet<int>();
+
+           
+            foreach (int num in array)
+            {
+               
+                if (seen.Contains(num))
+                {
+                    return true;
+                }
+
+             
+                seen.Add(num);
+            }
+
+            
+            return false;
+        }
         static void Main(string[] args)
         {
             #region Part01
@@ -277,14 +299,23 @@ namespace Assignment3_CS_Advanced
             }
             #endregion
 
-            #region
-            #endregion
+            #region Q5_Part2
+            //Given an array of integers, check if the array contains any duplicates.
+            int[] array = { 1, 2, 3, 4, 5, 2 };
 
-            #region
-            #endregion
-            #endregion
-        }
+            
+            bool hasDuplicates = ContainsDuplicates(array);
+
+            Console.WriteLine($"Array contains duplicates: {hasDuplicates}");
+        
+
+        #endregion
+
+        #region
+        #endregion
+        #endregion
     }
+}
 }
 
 
