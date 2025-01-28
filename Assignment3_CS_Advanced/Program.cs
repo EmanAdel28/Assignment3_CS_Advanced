@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using Assignment3_CS_Advanced.Genaruc_Collection_Dictionary;
 using Assignment3_CS_Advanced.HashTable;
+using Assignment3_CS_Advanced.Sorted_Dictionary;
 namespace Assignment3_CS_Advanced
 {
     
@@ -60,16 +61,36 @@ namespace Assignment3_CS_Advanced
             // -- Prevents repetition by using GetHashCode() and Equality
             // -- Keys must be unique, and null is allowed for values but not keys.
              
-            Dictionary<String , int> NoteBook = new Dictionary<String , int>(new GenericStringEqualityComparer());
+            //Dictionary<String , int> NoteBook = new Dictionary<String , int>(new GenericStringEqualityComparer());
+            //NoteBook.Add("Eman", 123);
+            //NoteBook.Add("Amira", 456);
+            //NoteBook.Add("Khalid", 789);
+            ////NoteBook.Add("khalid", 789);
+
+            //foreach(KeyValuePair<String , int> pair in NoteBook)
+            //{
+            //    Console.WriteLine($"{pair.Key} :: {pair.Value}");
+            //}
+
+            #endregion
+
+            #region 3-SortedDictionary
+            // Sorted Data Asc by default
+            // Work with algorithm Binary Search Tree
+            // Time Complexity => O(log n ) 
+            // -- in namespace  => System.Collection.Generic
+            // -- A generic key-value pair collection with type safety.
+
+            SortedDictionary<String, int> NoteBook = new SortedDictionary<String, int>(new StringSortedDec());
             NoteBook.Add("Eman", 123);
             NoteBook.Add("Amira", 456);
             NoteBook.Add("Khalid", 789);
-            //NoteBook.Add("khalid", 789);
 
-            foreach(KeyValuePair<String , int> pair in NoteBook)
+            foreach (KeyValuePair<String, int> pair in NoteBook)
             {
                 Console.WriteLine($"{pair.Key} :: {pair.Value}");
             }
+
 
             #endregion
             #endregion
