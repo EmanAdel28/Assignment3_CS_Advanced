@@ -79,6 +79,18 @@ namespace Assignment3_CS_Advanced
 
             return missingNumbers;
         }
+
+        static Hashtable SwapKeyValue(Hashtable original)
+        {
+            Hashtable swapped = new Hashtable();
+
+            foreach (DictionaryEntry entry in original)
+            {
+                swapped.Add(entry.Value, entry.Key);
+            }
+
+            return swapped;
+        }
         static void Main(string[] args)
         {
             #region Part01
@@ -430,7 +442,32 @@ namespace Assignment3_CS_Advanced
             }
             #endregion
 
-            #region 
+            #region Q10_Part2
+            //You have a hashtable with unique values, create a new hashtable where the keys and values are swapped.
+            Hashtable hashtable = new Hashtable();
+            hashtable.Add(1, "One");
+            hashtable.Add(2, "Two");
+            hashtable.Add(3, "Three");
+
+            Console.WriteLine("Original Hashtable:");
+            foreach (DictionaryEntry entry in hashtable)
+            {
+                Console.WriteLine($"Key: {entry.Key}, Value: {entry.Value}");
+            }
+
+            Hashtable swappedHashtable = SwapKeyValue(hashtable);
+
+            Console.WriteLine("\nSwapped Hashtable:");
+            foreach (DictionaryEntry entry in swappedHashtable)
+            {
+                Console.WriteLine($"Key: {entry.Key}, Value: {entry.Value}");
+            }
+            #endregion
+
+            #region Q11_Part2
+            #endregion
+
+            #region Q12_Part2
             #endregion
             #endregion
         }
