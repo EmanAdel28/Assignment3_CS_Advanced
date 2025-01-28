@@ -365,10 +365,23 @@ namespace Assignment3_CS_Advanced
             }
             #endregion
 
-            #region 
+            #region Q7_Part2
+            //Create an employee directory where employee IDs (int) are keys and employee names (string) are values.
+            //Use a SortedList to manage and retrieve employees in order of their IDs.
+            SortedList<int, string> employee = new SortedList<int, string>();
+            employee.Add(1, "Ahmed");
+            employee.Add(2, "Omar");
+            employee.Add(3, "Eman");
+
+            foreach(KeyValuePair<int, String> pair in employee)
+            {
+                Console.WriteLine($"{employee.Key} :: {employee.Value}");
+            }
+
             #endregion
 
-            #region 
+            #region Q_Part2
+            //
             #endregion
 
             #region 
