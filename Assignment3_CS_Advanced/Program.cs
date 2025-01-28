@@ -465,6 +465,19 @@ namespace Assignment3_CS_Advanced
             #endregion
 
             #region Q11_Part2
+            //Find the union of two sets, returning the unique elements from both sets.
+            HashSet<int> set1 = new HashSet<int> { 1, 2, 3, 4 };
+            HashSet<int> set2 = new HashSet<int> { 3, 4, 5, 6 };
+
+            HashSet<int> unionSet = new HashSet<int>(set1);
+            unionSet.UnionWith(set2); 
+
+            
+            Console.WriteLine("Union of the two sets:");
+            foreach (var element in unionSet)
+            {
+                Console.WriteLine(element);
+            }
             #endregion
 
             #region Q12_Part2
