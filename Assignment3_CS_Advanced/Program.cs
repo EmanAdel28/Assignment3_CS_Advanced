@@ -417,7 +417,7 @@ namespace Assignment3_CS_Advanced
             }
             #endregion
 
-            #region  Q9_Part2
+            #region  Q9-Part2
             //You  have a list of integers with possible duplicates, create a HashSet that contains only unique values.
             List<int> numbers = new List<int> { 1, 2, 2, 3, 4, 4, 5, 5, 6 };
 
