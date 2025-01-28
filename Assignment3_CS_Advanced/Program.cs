@@ -57,6 +57,28 @@ namespace Assignment3_CS_Advanced
             
             return false;
         }
+
+        static List<int> FindMissingNumbers(int[] array, int N)
+        {
+            List<int> missingNumbers = new List<int>();
+
+            bool[] seen = new bool[N + 1]; 
+
+            foreach (int num in array)
+            {
+                seen[num] = true;
+            }
+
+            for (int i = 1; i <= N; i++)
+            {
+                if (!seen[i])
+                {
+                    missingNumbers.Add(i);
+                }
+            }
+
+            return missingNumbers;
+        }
         static void Main(string[] args)
         {
             #region Part01
@@ -368,20 +390,31 @@ namespace Assignment3_CS_Advanced
             #region Q7_Part2
             //Create an employee directory where employee IDs (int) are keys and employee names (string) are values.
             //Use a SortedList to manage and retrieve employees in order of their IDs.
-            SortedList<int, string> employee = new SortedList<int, string>();
-            employee.Add(1, "Ahmed");
-            employee.Add(2, "Omar");
-            employee.Add(3, "Eman");
+            //SortedList<int, string> employee = new SortedList<int, string>();
+            //employee.Add(1, "Ahmed");
+            //employee.Add(2, "Omar");
+            //employee.Add(3, "Eman");
 
-            foreach(KeyValuePair<int, String> pair in employee)
-            {
-                Console.WriteLine($"{employee.Key} :: {employee.Value}");
-            }
+            //foreach(KeyValuePair<int, String> pair in employee)
+            //{
+            //    Console.WriteLine($"{employee.Key} :: {employee.Value}");
+            //}
 
             #endregion
 
-            #region Q_Part2
-            //
+            #region Q8_Part2
+            //Given an array of integers from 1 to N with some numbers missing, find the missing numbers.
+            int[] arr = { 1, 2, 4, 6, 7, 8 };
+
+            int N = 8;
+
+            List<int> missingNumbers = FindMissingNumbers(arr, N);
+
+            Console.WriteLine("Missing Numbers:");
+            foreach (var number in missingNumbers)
+            {
+                Console.WriteLine(number);
+            }
             #endregion
 
             #region 
