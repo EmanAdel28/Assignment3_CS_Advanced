@@ -417,7 +417,17 @@ namespace Assignment3_CS_Advanced
             }
             #endregion
 
-            #region 
+            #region  Q9_Part2
+            //You  have a list of integers with possible duplicates, create a HashSet that contains only unique values.
+            List<int> numbers = new List<int> { 1, 2, 2, 3, 4, 4, 5, 5, 6 };
+
+            HashSet<int> uniqueNumbers = new HashSet<int>(numbers);
+
+            Console.WriteLine("Unique Numbers:");
+            foreach (var number in uniqueNumbers)
+            {
+                Console.WriteLine(number);
+            }
             #endregion
 
             #region 
