@@ -140,29 +140,52 @@ namespace Assignment3_CS_Advanced
             #region Q1-Part2
             //Given an array of integers, count the frequency of each element using a hash table.
 
-            int[] Array = { 1, 2, 3, 1, 4, 3, 5, 6, 4, 7, 8 };
+            //int[] Array = { 1, 2, 3, 1, 4, 3, 5, 6, 4, 7, 8 };
 
-            Hashtable Frequency = new Hashtable();
+            //Hashtable Frequency = new Hashtable();
 
-            foreach(int num in Array)
-            {
-                if(Frequency.ContainsKey(num))
-                {
-                    Frequency[num] = (int)Frequency[num] + 1;
-                }
-                else
-                {
-                    Frequency[num] = 1;
-                }
-            }
+            //foreach(int num in Array)
+            //{
+            //    if(Frequency.ContainsKey(num))
+            //    {
+            //        Frequency[num] = (int)Frequency[num] + 1;
+            //    }
+            //    else
+            //    {
+            //        Frequency[num] = 1;
+            //    }
+            //}
 
-            foreach (DictionaryEntry entry in Frequency)
-            {
-                Console.WriteLine($"Element: {entry.Key} ::Frequency : {entry.Value}");
-            }
+            //foreach (DictionaryEntry entry in Frequency)
+            //{
+            //    Console.WriteLine($"Element: {entry.Key} ::Frequency : {entry.Value}");
+            //}
             #endregion
 
-            #region
+            #region Q2_Part2
+            //You have a hashtable where its values are integers, find the key associated with the highest value.
+
+            Hashtable hashtable = new Hashtable();
+            hashtable.Add("A", 6);
+            hashtable.Add("B", 5);
+            hashtable.Add("C", 8);
+            hashtable.Add("D", 2);
+
+            string highestKey = null;
+            int highestValue = int.MinValue;
+            foreach (DictionaryEntry entry in hashtable)
+            {
+                
+                if((int)entry.Value>highestValue)
+                {
+                    highestValue = (int)entry.Value;
+                    highestKey = (string)entry.Key;
+                }
+                
+            }
+
+            Console.WriteLine($"Key with the highest value: {highestKey}, Value: {highestValue}");
+
             #endregion
 
             #region
