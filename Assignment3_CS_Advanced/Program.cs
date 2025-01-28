@@ -8,6 +8,33 @@ namespace Assignment3_CS_Advanced
 
     internal class Program
     {
+        static List<List<string>> GroupAnagrams(string[] words)
+        {
+            
+            Dictionary<string, List<string>> anagramGroups = new Dictionary<string, List<string>>();
+
+            for (int i = 0; i < words.Length; i++)
+            {
+                string word = words[i];
+
+                
+                char[] sortedChars = word.ToCharArray();
+                Array.Sort(sortedChars);
+                string sortedKey = new string(sortedChars);
+
+               
+                if (!anagramGroups.ContainsKey(sortedKey))
+                {
+                    List<string> newGroup = new List<string>();
+                    anagramGroups[sortedKey] = newGroup;
+                }
+                anagramGroups[sortedKey].Add(word);
+            }
+
+           
+            List<List<string>> result = new List<List<string>>(anagramGroups.Values);
+            return result;
+        }
         static void Main(string[] args)
         {
             #region Part01
@@ -235,7 +262,19 @@ namespace Assignment3_CS_Advanced
 
             #endregion
 
-            #region
+            #region Q4-Part2
+           
+            string[] words = { "listen", "silent", "enlist", "rat", "tar", "art", "hello", "olleh" };
+
+            
+            List<List<string>> groupedAnagrams = GroupAnagrams(words);
+
+         
+            Console.WriteLine("Grouped Anagrams:");
+            foreach (List<string> group in groupedAnagrams)
+            {
+                Console.WriteLine("[" + string.Join(", ", group) + "]");
+            }
             #endregion
 
             #region
