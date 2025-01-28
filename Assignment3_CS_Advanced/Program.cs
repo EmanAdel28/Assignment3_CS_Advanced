@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using Assignment3_CS_Advanced.Genaruc_Collection_Dictionary;
+using Assignment3_CS_Advanced.HashList;
 using Assignment3_CS_Advanced.HashTable;
 using Assignment3_CS_Advanced.Sorted_Dictionary;
 namespace Assignment3_CS_Advanced
@@ -94,7 +95,7 @@ namespace Assignment3_CS_Advanced
 
             #endregion
 
-            #region 3-SortedDictionary
+            #region 4-SortedDictionary
             // Sorted Data Asc by default
             // Work with algorithm 2 Array
             // Time Complexity => O(log n )  in Search and retrieve
@@ -113,6 +114,25 @@ namespace Assignment3_CS_Advanced
             }
 
 
+            #endregion
+
+            #region 5- HashSet
+            // Work with Hashtable internal
+            // A generic collection of unique elements with no specific order.
+            // Backed by a hash table.
+            // Namespace: System.Collections.Generic
+            // Time Complexity => O(1)
+
+            HashSet<Movies> list = new HashSet<Movies>();
+            list.Add(new Movies(101, "Animation", 200));
+            list.Add(new Movies(102, "Harry Poter", 300));
+            list.Add(new Movies(103, "Avatar", 150));
+            list.Add(new Movies(103, "Avatar", 150));
+
+            foreach(Movies e in list)
+            {
+                Console.WriteLine(e.ToString());
+            }
             #endregion
             #endregion
         }
