@@ -307,15 +307,78 @@ namespace Assignment3_CS_Advanced
             bool hasDuplicates = ContainsDuplicates(array);
 
             Console.WriteLine($"Array contains duplicates: {hasDuplicates}");
-        
 
-        #endregion
 
-        #region
-        #endregion
-        #endregion
+            #endregion
+
+            #region  Q6-Part2
+            SortedDictionary< int , String> NoteBook = new SortedDictionary<int, String>();
+            NoteBook.Add(12,"Eman");
+            NoteBook.Add(13,"Amira");
+            NoteBook.Add(14,"Khalid");
+
+
+            foreach (KeyValuePair<int, String> pair in NoteBook)
+            {
+                if (NoteBook.ContainsKey(pair.Key))
+                {
+                    Console.WriteLine(NoteBook[pair.Key]);
+                }
+                else
+                {
+                    Console.WriteLine("Student not found.");
+                }
+            }
+
+
+            foreach (KeyValuePair<int, String> pair in NoteBook)
+            {
+                if (NoteBook.ContainsKey(pair.Key))
+                {
+                   Console.WriteLine( NoteBook[pair.Key]);
+                }
+                else
+                {
+                   Console.WriteLine( "Student not found.");
+                }
+            }
+
+
+
+
+            foreach (KeyValuePair<int, String> pair in NoteBook)
+            {
+                if (NoteBook.ContainsKey(pair.Key))
+                {
+                    NoteBook.Remove(pair.Key);
+                    Console.WriteLine($"Removed student with ID: {pair.Key}");
+                }
+                else
+                {
+                    Console.WriteLine($"No student found with ID {pair.Key}.");
+                }
+            }
+
+            foreach (KeyValuePair<int, String> pair in NoteBook)
+            {
+                Console.WriteLine($"{pair.Key} :: {pair.Value}");
+            }
+            #endregion
+
+            #region 
+            #endregion
+
+            #region 
+            #endregion
+
+            #region 
+            #endregion
+
+            #region 
+            #endregion
+            #endregion
+        }
     }
-}
 }
 
 
