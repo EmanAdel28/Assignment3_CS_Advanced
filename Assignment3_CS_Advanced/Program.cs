@@ -91,6 +91,21 @@ namespace Assignment3_CS_Advanced
 
             return swapped;
         }
+
+        static int CountKeysStartingWith(Dictionary<string, int> dict, char targetChar)
+        {
+            int count = 0;
+
+            foreach (var entry in dict)
+            {
+                if (entry.Key.StartsWith(targetChar.ToString(), StringComparison.OrdinalIgnoreCase))
+                {
+                    count++;
+                }
+            }
+
+            return count;
+        }
         static void Main(string[] args)
         {
             #region Part01
@@ -481,9 +496,30 @@ namespace Assignment3_CS_Advanced
             #endregion
 
             #region Q12_Part2
-            #endregion
-            #endregion
-        }
+            //You have a dictionary with string keys, the user will enter targetChar ,
+            //count how many keys start with this targetChar.
+
+            Dictionary<string, int> dictionary = new Dictionary<string, int>
+        {
+            { "apple", 1 },
+            { "animal", 2 },
+            { "airport", 3 }
+        };
+
+            Console.Write("Enter the target character: ");
+            char targetChar = Console.ReadKey().KeyChar;  
+            Console.WriteLine();  
+
+            
+            int count = CountKeysStartingWith(dictionary, targetChar);
+
+            
+            Console.WriteLine($"Number of keys that start with '{targetChar}': {count}");
+        
+
+        #endregion
+        #endregion
+    }
     }
 }
 
