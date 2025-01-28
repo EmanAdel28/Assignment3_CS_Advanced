@@ -515,11 +515,36 @@ namespace Assignment3_CS_Advanced
 
             
             Console.WriteLine($"Number of keys that start with '{targetChar}': {count}");
-        
 
-        #endregion
-        #endregion
-    }
+
+            #endregion
+
+            #region Task - SortedSet
+            //Example for SortedSet
+
+            SortedSet<int> sortedSet = new SortedSet<int>();
+
+            
+            sortedSet.Add(1);
+            sortedSet.Add(3);
+            sortedSet.Add(4);
+            sortedSet.Add(1);
+            sortedSet.Add(7);
+
+
+            sortedSet.Add(3);
+            sortedSet.Add(8);
+
+            foreach (int item in sortedSet)
+            {
+                Console.WriteLine(item);
+            }
+
+            // Removing an element
+            sortedSet.Remove(3);
+            #endregion
+            #endregion
+        }
     }
 }
 
